@@ -10,7 +10,7 @@ set xtics rotate by 45 right
 set xtics 20000
 
 plot [:247614][:]'bench_cpy.txt' using 1:2 with points title 'cpy',\
-
+'bench_ref.txt' using 1:2 with points title 'ref',\
 
 
 

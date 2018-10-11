@@ -41,6 +41,9 @@ test_%: test_%.o $(OBJS_LIB)
 	$(VECHO) "  CC\t$@\n"
 	$(Q)$(CC) -o $@ $(CFLAGS) -c -MMD -MF .$@.d $<
 
+plot:
+	gnuplot scripts/runtime3.gp
+
 test:  $(TESTS)
 	echo 3 | sudo tee /proc/sys/vm/drop_caches;
 	perf stat --repeat 100 \
